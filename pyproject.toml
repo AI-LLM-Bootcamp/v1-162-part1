@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "164-rag-for-pdfs-v2"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [
+    { include = "app" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+uvicorn = "^0.23.2"
+langserve = {extras = ["server"], version = ">=0.0.30"}
+pydantic = "<2"
+tqdm = "^4.66.2"
+unstructured = {extras = ["all-docs"], version = "^0.12.6"}
+langchain-experimental = "^0.0.55"
+python-dotenv = "^1.0.1"
+langchain-openai = "^0.1.1"
+langchain-community = "^0.0.31"
+tiktoken = "^0.6.0"
+psycopg = "^3.1.18"
+pgvector = "^0.2.5"
+
+
+[tool.poetry.group.dev.dependencies]
+langchain-cli = ">=0.0.15"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
